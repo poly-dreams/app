@@ -8,17 +8,17 @@ services:
       - "8177:8177"
     networks:
       my-network:
-        ipv4_address: 172.18.0.2
+        ipv4_address: 10.0.0.2
 
   proxy-server:
     container_name: poly-proxy
-    build: ./proxy
+    build: ./proxy  
     ports:
       - "80:80"
       - "443:443"
     networks:
       my-network:
-        ipv4_address: 172.18.0.3
+        ipv4_address: 10.0.0.3
 
 
 networks:
@@ -26,4 +26,4 @@ networks:
     driver: bridge
     ipam:
       config:
-        - subnet: 172.18.0.0/16
+        - subnet: 10.0.0.0/16
