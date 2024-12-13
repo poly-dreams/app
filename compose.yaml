@@ -5,4 +5,25 @@ services:
     container_name: poly-app
     build: .
     ports:
-      - "8080:8080"
+      - "8177:8177"
+    networks:
+      my-network:
+        ipv4_address: 172.18.0.2
+
+  proxy-server:
+    container_name: poly-proxy
+    build: ./proxy
+    ports:
+      - "80:80"
+      - "443:443"
+    networks:
+      my-network:
+        ipv4_address: 172.18.0.3
+
+
+networks:
+  my-network:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.18.0.0/16

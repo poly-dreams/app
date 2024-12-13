@@ -1,0 +1,149 @@
+/*
+ * Global styles
+ * main pallet     #e0f2e6 #68b4a4 #4e7980 #20283d
+ * inverted pallet #24081a #b92947 #da6956 #eedeb4
+ */
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+
+}
+
+body {
+    background-color: #e0f2e6;
+    color: #2e0f2e;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+#main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #68b4a4;
+    padding: 1rem;
+    border-bottom: 2px solid #20283d;
+    height: 10vh;
+}
+#main-nav>.main-nav-ul {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    list-style: none;
+    font-size: 1.333rem;
+    text-align: center;
+}
+#main-nav>.main-nav-ul>li {
+    cursor: pointer;
+    transition: transform 0.1s ease-in-out;
+    padding: 0.5rem;
+}
+#main-nav>.main-nav-ul>li:hover {
+    transform: scale(1.15);
+    font-weight: bold;
+}
+
+#main-nav>svg {
+    max-height: 150%;
+    max-width: 150%;
+    cursor: pointer;
+    margin-left: 10rem;
+    transform: translateX(-50%);
+}
+
+.main-content {
+    display: flex;
+    height: calc(90vh - 3px - 2rem);
+}
+
+.side-nav {
+    display: flex;
+    align-items: top;
+    background-color: rgba(255, 255, 255, 0.1);
+    text-align: center;
+    max-width: 20rem;
+    height: calc(100% - 2rem);
+    padding-top: 1rem;
+    
+}
+.side-nav>ul {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Nunito', 'Quicksand', sans-serif;
+    justify-content: space-evenly;
+    list-style: none;
+    font-size: 1.15rem;
+    font-weight: 600;
+    margin: 0;
+    padding: 0 10%;
+}
+.side-nav>ul>li {
+    cursor: pointer;
+    padding: 1rem 0.5rem;
+    transition: transform 0.1s ease-in-out;
+    color: #24081a;
+    
+}
+.side-nav>ul>li:hover {
+    transform: scale(1.15);
+    font-weight: bold;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+#menu-icon {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: calc(10vh + 3rem);
+    cursor: pointer;
+    text-align: center;
+    max-width: 100%;
+    max-height: 100%;
+    z-index: 500;
+    cursor: pointer;
+}
+
+#map {
+    width: calc(100% - 20rem);
+    height: calc(100% - 10vh - 2rem - 3px);
+    position: absolute;
+    z-index: 501;
+}
+
+#nav-map-menu-b {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   z-index: 1502;
+   position: absolute;
+   width: 100%;
+   background-color: rgba(32, 40, 61, .3);
+   bottom: 0;
+   font-weight: bold;
+   font-size: .8rem;
+}
+
+.loginWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+}
+.logStatus {
+    color: #b92947;
+}

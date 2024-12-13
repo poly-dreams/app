@@ -1,0 +1,60 @@
+
+
+<div class="radial-menu">
+    <style>
+        .radial-menu {
+            position: relative;
+            transform: translate(-50%, -50%);
+            background: rgb(255,255,255);
+            background: radial-gradient(circle, rgba(255,255,255,0) 0%, rgba(224,242,230,0.4990371148459384) 25%, rgba(32,40,61,0.5) 60%, rgba(32,40,61,0.8015581232492998) 90%, rgba(224,242,230,0.8995973389355743) 100%);
+            
+            border-radius: 50%;
+            width: 12rem;
+            height: 12rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .radial-menu-item {
+            position: absolute;
+            border: .25rem solid black;
+            border-radius: 100%;
+            text-align: center;
+            cursor: pointer;
+            transition: background-color 0.1s ease-in-out;
+            background-color: #20283d;
+            color: #f0f0f0;
+            width: 4rem;
+            height: 4rem;
+            
+        }
+        .radial-menu-item:hover {
+            
+            color: #f0f0f0;
+            animation: radil_scale 0.2s ease-in-out forwards;
+            
+
+        }
+
+        @keyframes radil_scale {
+            from {
+                transform: scale(1);
+                background-color: rgb(32, 40, 61);
+                border-color: black;
+
+            }
+            to {
+                transform: scale(1.8);
+                background-color: rgba(104, 180, 164, 1);
+                border-color: white;
+            }
+        }
+
+        
+    </style>
+    <div class="radial-menu-item"></div>
+    <div class="radial-menu-item"></div>
+    <div class="radial-menu-item"></div>
+    <div class="radial-menu-item"></div>
+</div>
